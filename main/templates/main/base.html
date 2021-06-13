@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Milky Day</title>
+
+    <link rel="stylesheet" href="{% static 'css/master.css' %}"/>
+
+    {% block style %}
+    {% endblock %}
+
+  </head>
+
+  <body>
+    {% block first %}
+
+    {% endblock %}
+    <header class="banner">
+
+      <nav class="menu">
+        <ul>
+          <li class="home"><a href="/home">Home</a></li>
+          <li class="music"><a href="/music">Music</a></li>
+          <li class="portfolio"><a href="/portfolio">Portfolio</a></li>
+          <li class="merch"><a href="/merch">Merch</a></li>
+        </ul>
+      </nav>
+
+      {% block banner %}
+
+      {% endblock %}
+
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+      <div class="socials">
+
+        <a href="https://open.spotify.com/artist/7FIqXqYZHMomTAcTXF4UHu?si=xNPTpBJDS96d3MiaC2-UQw">
+          <img src="{% static 'img/icons/spotify.svg' %} " alt="spotify">
+        </a>
+
+        <div class="social-spacer"></div>
+
+        <a href="https://soundcloud.com/milky_day">
+          <img src="{% static 'img/icons/soundcloud.svg' %}" alt="soundcloud">
+        </a>
+
+        <div class="social-spacer"></div>
+
+        <a href="https://music.apple.com/us/artist/milky-day/1360328982">
+          <img src="{% static 'img/icons/music.svg' %}" alt="applemusic">
+        </a>
+
+        <div class="social-spacer"></div>
+
+        <a href="https://www.instagram.com/itsmilkyday/">
+          <img src="{% static 'img/icons/instagram.svg' %}" alt="instagram">
+        </a>
+      </div>
+    </footer>
+
+    {% block js %}
+    {% endblock %}
+
+
+  </body>
