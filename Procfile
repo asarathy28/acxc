@@ -1,1 +1,1 @@
-web: gunicorn milkyday.wsgi --log-file -
+web: gunicorn acxc.wsgi --log-file -
