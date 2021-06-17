@@ -1,0 +1,33 @@
+/* Banner */
+.banner {
+  height: 300px;
+}
+
+/* Runs */
+.run-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+}
+
+.run {
+  max-width: 900px;
+}
+
+.run h1 {
+  text-align: left;
+  width: 100%;
+}
+
+.run p {
+  text-align: left;
+  padding-top: 1em;
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  padding-top: 1em;
+}

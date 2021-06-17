@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <title>Milky Day</title>
+    <title>Amherst Runs</title>
 
     <link rel="stylesheet" href="{% static 'css/master.css' %}"/>
 
@@ -25,9 +25,11 @@
       <nav class="menu">
         <ul>
           <li class="home"><a href="/home">Home</a></li>
-          <li class="music"><a href="/music">Music</a></li>
-          <li class="portfolio"><a href="/portfolio">Portfolio</a></li>
-          <li class="merch"><a href="/merch">Merch</a></li>
+          <li class="short"><a href="/short">Short</a></li>
+          <li class="medium"><a href="/medium">Medium</a></li>
+          <li class="long"><a href="/long">Long</a></li>
+          <li class="truely-long"><a href="/truely-long">Truely Long</a></li>
+          <li class="destination"><a href="/destination">Destination</a></li>
         </ul>
       </nav>
 
@@ -37,9 +39,11 @@
 
     </header>
 
-    {% block content %}
+    <div class="page">
+      {% block content %}
 
-    {% endblock %}
+      {% endblock %}
+    </div>
 
     <footer>
 
@@ -47,6 +51,5 @@
 
     {% block js %}
     {% endblock %}
-
 
   </body>
