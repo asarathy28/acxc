@@ -20,37 +20,24 @@
 
 {% block content %}
 
-<div class="run-container">
+  {% for r in routes %}
 
-  <div class="run">
+    <div class="run-container">
 
-    <h1>Tuttle</h1>
-    <p class="tags">dirt road/trails, mostly flat.</p>
+      <div class="run">
 
-    <iframe class="map"  height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://onthegomap.com/?m=r&amp;u=mi&amp;w%5B%5D=Routes+may+not+be+suitable+for+public+use.&amp;c%5B%5D=Route+data+%C2%A92021+On+The+Go+Map%2C+OpenStreetMap+Contributors&amp;d=3639&amp;f=6c96765bde&amp;n=1&amp;dm=1&amp;context=embed&amp;r2=uYpY8r_pwD~1KZ1m3h1a3R79M9U1a14q3Ik71U5MVq17KBk11W12W1Sa4y2kDY1g54GX1G6U4S0Q9W1X1q19Od2g3h3m4n4Y6Tm1NKB4N1TFN7v10J1TDp1NR5B2HCDKNy2Dg1DU5Q1U3RFV75FDP1v2GJ3H6p6o5X1a1LAt13X28b11t12T5DB7D9R0X1AJC9iPdMm1f1y5f5i2j2c1h1KRg1h26GG0KEc1SS8Br44T6PURAH6P010X15r11X1EX1o1f1RZ41V2VCj18JW1p16L2THj73p32Z1ATALS840q1~2Ur3_1FY3U"></iframe>
+        <h1>{{r.name}}</h1>
+        <p class="tags">{{r.tags}}</p>
 
-    <p>Tuttle. Where the name came from? Unsure (or at least I have no idea). Tuttle is most commonly known as the Book & Plow farm around campus and sometimes referred to as Fort Hill by literally no one ever (but there is rock somewhere around the base that says 'Fort Hill'). Probably the best of the standard tacks because who doesn't love a nice sunset on the hill to end off a great run. The men's team has a monthly tradition of walking out to Tuttle on Saturday nights to freeze our asses off under the stars. Said tradition may sometimes involve Billy Massey setting something on fire.</p>
+        <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{r.map_src}}"></iframe>
 
-  </div>
+        <p>{{r.description|linebreaks}}</p>
 
-</div>
+      </div>
 
-<div class="run-container">
+    </div>
 
-  <div class="run">
-
-    <h1>Field Loop</h1>
-    <p class="tags">trails, hilly, MUDDY.</p>
-
-    <iframe class="map" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://onthegomap.com/?m=r&amp;u=mi&amp;w%5B%5D=Routes+may+not+be+suitable+for+public+use.&amp;c%5B%5D=Route+data+%C2%A92021+On+The+Go+Map%2C+OpenStreetMap+Contributors&amp;d=1664&amp;f=6c96765bde&amp;n=1&amp;dm=1&amp;context=embed&amp;r2=YfoY8ZcowDe1n1AX13TX2l2Pn1NJh1PBP6r17Z1Hj17j2FHN3b1X2DHHTJ910J27E5a96w21Y16o10o13g2Ds1POt11l1QV6p10f1Y2z1W2Ju1Lo27c11i1DULKNi1Lu17O3ODOJM9Q8MAEE5GPO3q1PY2t1w1d2g1X26BY1b1a1X1u2z1OJm1n1G0m13_1~1Y3v2MDI3OJMP"></iframe>
-
-    <p>Having been neglected for years, the field loop has been mostly unrunnable these past few years but the allure remains. Three laps around, the Field Loop 5k is the most grueling of events forgotten to a past era of acxc history. An epic postseason inter squad race between those still bitter to be left off the nationals squad, the Field Loop 5k was a battle of grit and guts for redemption. To this day, only the legendary Justin Barry has broken the 16 min barrier on this unforgiving course.</p>
-
-    <p>Okay, I say all this as if I was there but this was before my time too. And I'm only half being sarcastic because a field loop 5k sounds sooo hard. Hopefully the field loop will be back in commission this fall after summer maintenance.</p>
-
-  </div>
-
-</div>
+  {% endfor %}
 
 
 {% endblock %}

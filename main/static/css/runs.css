@@ -13,7 +13,7 @@
 }
 
 .run {
-  max-width: 900px;
+  width: 75%;
 }
 
 .run h1 {
@@ -29,5 +29,6 @@
 
 .map {
   width: 100%;
+  height: 500px;
   padding-top: 1em;
 }
