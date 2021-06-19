@@ -6,7 +6,7 @@ from django.db import models
 class ShortRoutes(models.Model):
     name = models.CharField(max_length=200)
     tags = models.CharField(max_length=200)
-    map_src = models.CharField(max_length=1000)
+    map_src = models.TextField()
     description = models.TextField()
 
     def __str__ (self):
@@ -15,7 +15,7 @@ class ShortRoutes(models.Model):
 class MediumRoutes(models.Model):
     name = models.CharField(max_length=200)
     tags = models.CharField(max_length=200)
-    map_src = models.CharField(max_length=1000)
+    map_src = models.TextField()
     description = models.TextField()
 
     def __str__ (self):
@@ -24,7 +24,7 @@ class MediumRoutes(models.Model):
 class LongRoutes(models.Model):
     name = models.CharField(max_length=200)
     tags = models.CharField(max_length=200)
-    map_src = models.CharField(max_length=1000)
+    map_src = models.TextField()
     description = models.TextField()
 
     def __str__ (self):
@@ -33,7 +33,7 @@ class LongRoutes(models.Model):
 class LongRunRoutes(models.Model):
     name = models.CharField(max_length=200)
     tags = models.CharField(max_length=200)
-    map_src = models.CharField(max_length=1000)
+    map_src = models.TextField()
     description = models.TextField()
 
     def __str__ (self):
@@ -42,7 +42,7 @@ class LongRunRoutes(models.Model):
 class DestinationRoutes(models.Model):
     name = models.CharField(max_length=200)
     tags = models.CharField(max_length=200)
-    map_src = models.CharField(max_length=1000)
+    map_src = models.TextField()
     description = models.TextField()
 
     def __str__ (self):
