@@ -61,7 +61,7 @@ nav {
 .menu a:visited:hover,
 .menu a:active,
 .menu a:visited:active {
-  color: pink;
+  color: #debdff;
   /* text-decoration: underline; */
 }
 
@@ -78,7 +78,7 @@ nav {
 
 .title h1 {
   white-space: nowrap;
-  color: white;
+  color: #debdff;
   font-size: 55px;
   padding-left: 5px;
   padding-right: 5px;
