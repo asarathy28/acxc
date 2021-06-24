@@ -120,8 +120,6 @@ footer {
 }
 
 
-@media only screen and (min-width: 750px) {
-
   .menu li {
     width: auto;
     padding-top: .3em;
@@ -131,6 +129,29 @@ footer {
 
   .menu li:nth-of-type(2n) {
     border-left: none;
+  }
+
+@media only screen and (max-width: 750px) {
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    /*border-top: 1px white solid;
+    border-bottom: 1px white solid;*/
+    /* border: 1px white solid; */
+  }
+
+  .title h1 {
+    text-align: center;
+    white-space: normal;
+    color: #debdff;
+    font-size: 45px;
+    padding-left: 0em;
+    padding-right: 0em;
+    width: 100%;
   }
 
 }
