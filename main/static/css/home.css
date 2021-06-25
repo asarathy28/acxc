@@ -46,6 +46,20 @@
   padding-bottom: .5em;
 }
 
+.index-column a:link,
+.index-column a:visited {
+  text-decoration: none;
+  color: color: #9654ff;
+}
+
+.index-column a:hover,
+.index-column a:visited:hover,
+.index-column a:active,
+.index-column a:visited:active {
+  color: #debdff;
+  /* text-decoration: underline; */
+}
+
 li {
   list-style-type: none;
   width: 100%;
