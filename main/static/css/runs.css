@@ -27,11 +27,25 @@
   width: 100%;
 }
 
+.run a:link,
+.run a:visited {
+  text-decoration: none;
+  color: #9654ff;
+}
+.run a:hover,
+.run a:visited:hover,
+.run a:active,
+.run a:visited:active {
+  color: #debdff;
+  /* text-decoration: underline; */
+}
+
 .map {
   width: 100%;
   height: 500px;
   padding-top: 1em;
 }
+
 
 @media only screen and (max-width: 750px) {
   .run-container {
