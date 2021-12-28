@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
+import dj_database_url
 
 sentry_sdk.init(
     dsn="https://919f903d585743e7b882f68da76ece17@o852283.ingest.sentry.io/5818785",
@@ -39,7 +40,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '**@3&s9w!lz5b1u&l6sl406919x)toaioj$i(lxl^6wzv**xx*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['acxc.herokuapp.com','127.0.0.1']
@@ -92,15 +93,17 @@ WSGI_APPLICATION = 'acxc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+os.environ['DATABASE_URL'] = 'postgres://eiwxdftgmzesrr:8ca3803222f1381d742ee6a47854208520f057324f9c483c2eedbcf2bb31aa7d@ec2-3-89-0-52.compute-1.amazonaws.com:5432/dfubkfrrpgh535'
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(engine='django_postgrespool2')
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+DATABASE_POOL_ARGS={
+    'max_overflow':10,
+    'pool_size':5,
+    'recycle':500
+}
+
 
 
 # Password validation
