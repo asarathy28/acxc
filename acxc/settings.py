@@ -96,8 +96,16 @@ WSGI_APPLICATION = 'acxc.wsgi.application'
 os.environ['DATABASE_URL'] = 'postgres://eiwxdftgmzesrr:8ca3803222f1381d742ee6a47854208520f057324f9c483c2eedbcf2bb31aa7d@ec2-3-89-0-52.compute-1.amazonaws.com:5432/dfubkfrrpgh535'
 
 DATABASES = {
-    'default': dj_database_url.config(engine='django_postgrespool2')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+#DATABASES = {
+#    'default': dj_database_url.config(engine='django_postgrespool2')
+#}
+
 DATABASE_POOL_ARGS={
     'max_overflow':10,
     'pool_size':5,
